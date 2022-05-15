@@ -1,0 +1,39 @@
+bool isVowel(char ch){
+bool isVowelchar=( ch=='a') || (ch=='A') ||( ch=='e') || (ch=='E') ||( ch=='i') || (ch=='I') ||( ch=='o') || (ch=='O') ||( ch=='u') || (ch=='U');
+
+if(isVowelchar){
+return true;
+}
+return false;
+}
+int firstIndex=0;
+int lastIndex=s.length()-1;
+
+while(firstIndex<=lastIndex){
+
+bool left=isVowel(s[firstIndex]);
+bool right=isVowel(s[lastIndex]);
+
+if(left==true && right==true){
+
+swap(s[fistIndex], s[rightIndex]);
+firstIndex++;
+lastIndex--;
+}
+
+else if(true==true && right==false){
+rightIndex--;
+}
+
+else if(true==false && right== true){
+leftIndex--;
+}
+
+else{
+leftIndex++;
+rightIndex--;
+}
+}
+return s;
+}
+}
