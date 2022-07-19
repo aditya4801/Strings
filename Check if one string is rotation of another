@@ -1,0 +1,10 @@
+class solution{
+ public:
+ 
+ bool isRotation(string s1, string s2){
+  if(s1.length()!= s2.length())
+    return false;
+    
+    return(s1.find(s2)!= -1 ? true : false);
+ }
+}
